@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+    <script>
+        window.onload = function () {
+            $("#hdwalletBtn").click(function () {
+                window.location.href = "./HDwallet.html"
+            })
+
+            $("#btctradeBtn").click(function () {
+                window.location.href = "./BTCTrade.html"
+            })
+        }
+    </script>
+    <style>
+        .button {
+            background-color: blanchedalmond;
+            border: none;
+            color: black;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            width: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <button class="button" id="hdwalletBtn">1. HD Wallet</button>
+    <br>
+    <button class="button" id="btctradeBtn">2. Bitcoin Transfer</button>
+</body>
+
+</html>

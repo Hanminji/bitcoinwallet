@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../js/RESTHttpClient.js"></script>
+
+    <script type="text/javascript" src="../js/bitcoinjs-3.3.2.js"></script>
+    <script type="text/javascript" src="../js/bitcoinjs-bip38-2.0.2.js"></script>
+    <script type="text/javascript" src="../js/bitcoinjs-extensions.js"></script>
+
+    <script type="text/javascript" src="../js/BTCTrade.js"></script>
+    <style>
+      .button {
+        background-color: rgb(245, 235, 219);
+        border: none;
+        color: black;
+        padding: 10px 15px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 13px;
+        margin: 4px 2px;
+        cursor: pointer;
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- <p style="background-color: yellow" id="result"></p> -->
+    <h2>Signing Example</h2>
+    network:
+    <select name="networks">
+      <option value="testnet">testnet</option>
+      <option value="mainnet">mainnet</option>
+    </select>
+    <br />
+    <br />
+    private key(WIF): <input id="privKey" /><button id="getAddBtn">Submit</button> <br /><br />
+    Address: <span id="address"></span> <br /><br />
+    trasnaction(Sign):
+    <div style="word-break: break-all" id="tx"></div>
+  </body>
+</html>

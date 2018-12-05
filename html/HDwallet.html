@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HDWallet</title>
+    <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+
+
+    <script type="text/javascript" src="../js/wordlist_english.js"></script>
+    <script type="text/javascript" src="../js/wordlist_korean.js"></script>
+    <script type="text/javascript" src="../js/sjcl-bip39.js"></script>
+    <script type="text/javascript" src="../js/jsbip39.js"></script>
+
+    <script type="text/javascript" src="../js/bitcoinjs-3.3.2.js"></script>
+    <script type="text/javascript" src="../js/bitcoinjs-bip38-2.0.2.js"></script>
+    <script type="text/javascript" src="../js/bitcoinjs-extensions.js"></script>
+    <script type="text/javascript" src="../js/ethereumjs-util.js"></script>
+    <script type="text/javascript" src="../js/HDwallet.js"></script>
+
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            word-break: break-all;
+        }
+    </style>
+</head>
+
+<body>
+    <p style="color: chocolate">Generate HD Key and Accounts</p>
+    <p style="font-size :  13px">Pick the language(English, Korean)</p>
+    <select name="language">
+        <option value="english">English</option>
+        <option value="korean">Korean</option>
+    </select>
+    <br>
+    <input id="passPhrase_gen" style="width: 300px" placeholder="input passphrase(Option)"><br>
+    <button id="generateBtn">Generate HD Key</button>
+
+    <p style="color: chocolate">Restore HD Key and Accounts</p>
+    <input id="seedPhrase" style="width: 600px" placeholder="input your seed phrase">
+    <br>
+    <input id="passPhrase_res" style="width: 300px" placeholder="input your passphrase">
+    <br>
+    <button id="restoreBtn">Restore HD Key</button>
+
+    <div style="display: none" id="resultDiv">
+        <h3>Words</h3>
+        <p id="wordResult"></p>
+        <h3>RootKey</h3>
+        <p id="bipRootKey"></p>
+        <h3>Accounts</h3>
+        <table>
+            <tr>
+                <th>Coin</th>
+                <th>Path</th>
+                <th>publicKey</th>
+                <th>Address</th>
+                <th>PrivateKey</th>
+            </tr>
+            <tr>
+                <td>BTC</td>
+                <td id="btcPath"></td>
+                <td id="btcPubKey"></td>
+                <td id="btcAddress"></td>
+                <td id="btcPrivKey"></td>
+            </tr>
+            <tr>
+                <td>ETH</td>
+                <td id="ethPath"></td>
+                <td id="ethPubKey"></td>
+                <td id="ethAddress"></td>
+                <td id="ethPrivKey"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
